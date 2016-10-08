@@ -1,0 +1,40 @@
+<html>
+  <head>
+      <title>EO1 Screen - The Big Picture</title>
+      <!-- Refresh the page every 10 minutes to get new images. -->
+      <meta http-equiv="refresh" content="600">
+      <script type="text/javascript" src="../js/twitterFetcher_min.js"></script>
+      <script type="text/javascript" src="../js/fetch_eo1_image.js"></script>
+  </head>
+  <body>
+    <div id="temp"></div>
+    <script type="text/javascript">
+        var params = getSearchParameters();
+
+        if(params.id != undefined) {
+            fetchTwitterImagesForEO1(params.id);
+        }else{
+            /* BigPicture  668626450774294528 */
+            /* 500ppx      668628475662626816 */
+            /* Getty       668628948637474816 */
+            /* Magnum      668628123802431488 */
+            /* PhotoBlggr  668626010909179904 */
+            /* Telegraph   668627288292851713 */
+            /* Ads         668479698469392384 */
+            /* Archillect  668458212828405760 */
+            /* Earth       668477799313768448 */
+            /* History     668478184799629312 */
+            /* Life        668478401196331008 */
+            /* NASA        668479474241957888 */
+            /* NYTimes     668627771258568705 */
+            /* Soylent     668620706070966272 */
+            /* Tweegeemee  689563379610980353 */
+
+            // default to BigPicture
+            fetchTwitterImagesForEO1('668626450774294528');
+        }
+    </script>
+  </body>
+</html>
+
+

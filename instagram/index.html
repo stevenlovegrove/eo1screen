@@ -3,7 +3,7 @@
       <title>EO1 Screen - Instagram Feed</title>
       <!-- Refresh the page every 10 minutes to get new images. -->
       <meta http-equiv="refresh" content="600">
-      <script type="text/javascript" src="http://www.eo1screen.com/instafeed.min.js"></script>
+      <script type="text/javascript" src="../js/instafeed.min.js"></script>
   </head>
   <body>
     <script type="text/javascript">
@@ -20,12 +20,9 @@
           setBackground(firstImgUrl);
         }
 
-        var pathArray = window.location.pathname.split('/');
+        var pathArray = window.location.pathname.split('?');
         var pathBase = pathArray[1];
         var searchKey = pathArray[2];
-        if (pathBase != 'ig') {
-          window.location = "http://www.eo1screen.com";
-        };
 
         var baseData = {clientId: clientId, 
                         mock: true, 
